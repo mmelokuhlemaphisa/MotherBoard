@@ -1,0 +1,41 @@
+body{
+    margin:auto;
+    padding: 1px;
+    background-color: black;
+
+}
+
+#image{
+    position: center;
+    height: auto;
+    width: 100%;
+}
+header{
+    text-align: center;
+    color:white
+}
+
+#cpu{
+    position:absolute;
+    top: 52%;
+    left: 40%;
+    width:200px;
+    height: 200px;;
+    background-color: red;
+}
+
+.container{
+    position: relative;
+}
+
+.hidden-text{
+    display: none;
+    position: absolute;
+     position:absolute;
+    top: 52%;
+    left: 40%;
+    width:200px;
+    height: 200px;;
+    background-color: red;
+    
+}

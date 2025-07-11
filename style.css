@@ -1,8 +1,9 @@
 body{
     margin: 0;
+    height: 100vh;
     font-family: monospace;
     background: blue;
-    color: #fff
+    color: #fff;
 }
 .container{
     padding: 0;
@@ -12,6 +13,15 @@ body{
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(255, 255, 255 0.2);
     
+}
+
+#cpu{
+    position:absolute;
+    top: 5%;
+    left: 30%;
+    width: 200px;
+    height: 200px;;
+    background-color: red;
 }
 
 h1{
@@ -42,8 +52,23 @@ flex-direction: row;
 
 .footer{
 margin-top: 20px;
-
-
+padding: 10px;
+border-top: 1px solid #fff;
+text-align: left;
+display: flex;
+flex-direction: row;
+justify-content:center;
 }
 
+.info{
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #fff;
+    text-align: center;
+    color: yellow;
+}
 
+button{
+    align-content: baseline;
+    background-color: bisque;
+}

@@ -12,13 +12,79 @@
     </header>
     <div id="topbutton"> 
         <a href="./index.html"><button>BIOS</button></a>
-        <img id="image" src="./images/motherboard-.jpn.webp">
-</div>
-    
-<div class="container">
-<P id="hidden-text" class="hidden">CPU means ‘Central Processing Unit’. This is the place of computer data handling. Moreover, it does all the data manipulation, calculations and formatting data for output. Hence, whenever someone buys a computer, he/she becomes more conscious about the CPU and its capabilities.
-</P>
-<button id="Show-popup-button">show-up</button>
-</div>
+     </div>
+
+<div class="motherboard">
+    <div class="component" id="cpu">CPU</div>
+    <div class="component" id="ram">RAM</div>
+    <div class="component" id="rom">ROM</div>
+    <div class="component" id="cmos">CMOS</div>
+    <div class="component" id="storage">Storage</div>
+    <div class="component" id="power">Power Unit</div>
+  </div>
+
+  <!-- Modal Popup -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <script>
+  const modal = document.getElementById("modal");
+const closeModal = document.getElementById("closeModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+
+// Component descriptions
+const descriptions = {
+  cpu: {
+    title: "CPU",
+    description: "The central processing unit is the processor that controls all the functions of the computer system. The overall flow of task and functions are controlled by the central processing unit. For the computer system, the central processing unit is called the brain of the computer system."
+  },
+  ram: {
+    title: "RAM",
+    description: "The RAM slots are used for connecting the RAM (memory) in the computer system. In the general computer system, there are mainly two RAM slots but sometimes there can be four-plus slots in the motherboard to increase the memory of the computer system."
+  },
+  rom: {
+    title: "ROM",
+    description: "Read-only memory (ROM) is used to store data that controls the most basic computer functionality, such as starting up, detecting peripherals and operating the computer fan. As the name suggests, the data cannot be edited by the system or users and, unlike RAM, the data stays recorded even when the computer is off. Like hard drives and flash memory, ROM is an example of non-volatile memory -- meaning that it remains in place when the power is off -- while RAM is considered volatile memory."
+  },
+  cmos: {
+    title: "CMOS",
+    description: "The CMOS battery is used for storing the BIOS settings on the motherboard. The CMOS battery is also capable of storing the time and data in it."
+  },
+  storage: {
+    title: "Storage Drive",
+    description: "Computer storage devices serve the crucial function of retaining data and instructions, both temporarily and permanently, enabling computers to function, store information, and access data"
+  },
+  power: {
+    title: "Power Unit",
+    description: "The power supply slot is used for providing the electric supply to the computer system so that it can start and perform its functions. The total power supply given to the system is around 110 ac power. In the power supply type connector, there are a total of 20-pins that are used to maintain the power supply to the computer system."
+  }
+};
+// Add click event listeners to components
+document.querySelectorAll(".component").forEach(comp => {
+  comp.addEventListener("click", () => {
+    const id = comp.id;
+    const info = descriptions[id];
+    if (info) {
+      modalTitle.textContent = info.title;
+      modalDescription.textContent = info.description;
+      modal.classList.remove("hidden");
+    }
+  });
+});
+
+// Close modal
+closeModal.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+
+
+
+  </script>
 </body>
-</html>
+</html> 

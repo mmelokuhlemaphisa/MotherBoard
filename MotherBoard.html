@@ -23,7 +23,6 @@
     <div class="component" id="power">Power Unit</div>
   </div>
 
-  <!-- Modal Popup -->
   <div id="modal" class="modal hidden">
     <div class="modal-content">
       <span id="closeModal" class="close">&times;</span>
@@ -38,7 +37,7 @@ const closeModal = document.getElementById("closeModal");
 const modalTitle = document.getElementById("modalTitle");
 const modalDescription = document.getElementById("modalDescription");
 
-// Component descriptions
+
 const descriptions = {
   cpu: {
     title: "CPU",
@@ -65,7 +64,7 @@ const descriptions = {
     description: "The power supply slot is used for providing the electric supply to the computer system so that it can start and perform its functions. The total power supply given to the system is around 110 ac power. In the power supply type connector, there are a total of 20-pins that are used to maintain the power supply to the computer system."
   }
 };
-// Add click event listeners to components
+
 document.querySelectorAll(".component").forEach(comp => {
   comp.addEventListener("click", () => {
     const id = comp.id;
@@ -78,13 +77,11 @@ document.querySelectorAll(".component").forEach(comp => {
   });
 });
 
-// Close modal
+
 closeModal.addEventListener("click", () => {
   modal.classList.add("hidden");
 });
+</script>
 
-
-
-  </script>
 </body>
 </html> 
